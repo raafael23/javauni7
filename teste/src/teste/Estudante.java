@@ -1,12 +1,13 @@
-package teste;
+package teste2.src.teste;
 
 public class Estudante {
 
-	int matricula;
-	String nome;
-	char sexo;
-	double[] notas = new double [4];
-	double media;
+	private int matricula;
+	private String nome;
+	private char sexo;
+	private double[] notas = new double [4];
+	private double media;
+	
 	Estudante() {matricula = 0;
 				nome = "nome";
 				sexo = '0';
@@ -14,10 +15,12 @@ public class Estudante {
 					notas[x] = 10;
 				}
 				}
+	
 	Estudante (String nomenovo, char sexonovo) {
 		nome = nomenovo;
 		sexo = sexonovo;
 	}
+	
 	Estudante (String nomenovo, char sexonovo, int matriculanovo) {
 		nome = nomenovo;
 		sexo = sexonovo;
@@ -71,10 +74,59 @@ public class Estudante {
 	
 	void calcularStatus () {
 		if (media>=7) {
-			System.out.println("aprovado eba legaal!");
+			System.out.println("aprovado!");
 		}
 		if (media <7) {
-			System.out.println("reprovado aaah!");
+			System.out.println("reprovado!");
 		}
 	}
+	
+	public void getNome () {
+		System.out.println (nome);
+	}
+	
+	public void getSexo () {
+		System.out.println (sexo);
+	}
+	
+	public void getMatricula () {
+		System.out.println (matricula);
+	}
+	
+	public void getNotas () {
+		for (int i = 0; i < notas.length; i++ ){
+			System.out.println (notas[i] + " ");
+		}
+	}
+	
+	public void getNota (int numProva) {
+		System.out.println (notas[numProva-1]);
+	}
+	
+	public void imprimirDados () {
+		System.out.println ("Matricula: "+matricula+", nome: "+nome+", sexo: "+sexo+", notas:"+notas[0]+"; "+notas[1]+"; "+notas[2]+"; "+notas[3]+"; "+media);
+	}
+	
+	public void setNome (String novoNome) {
+		nome = novoNome;
+	}
+	
+	public void setSexo (char novoSexo) {
+		sexo = novoSexo;
+	}
+	
+	public void setMatricula (int novaMatricula) {
+		matricula = novaMatricula;
+	}
+	
+	public void setNotas () {
+		for (int x = 0; x <notas.length; x++) {
+			notas[x] = 10;
+	}
+	}
+	
+	public void setNota (int numProva, double nota) {
+		notas[numProva-1]=nota;
+	}
+
 }
