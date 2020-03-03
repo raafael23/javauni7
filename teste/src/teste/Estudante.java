@@ -71,10 +71,10 @@ public class Estudante {
 	
 	void calcularStatus () {
 		if (media>=7) {
-			System.out.println("aprovado");
+			System.out.println("aprovado eba!");
 		}
 		if (media <7) {
-			System.out.println("reprovado");
+			System.out.println("reprovado aaah!");
 		}
 	}
 }
