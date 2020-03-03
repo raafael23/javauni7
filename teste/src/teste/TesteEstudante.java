@@ -43,7 +43,6 @@ public class TesteEstudante {
 		E03.exibir();
 		E03.exibir("dados do estudante");
 		E03.exibir("notas");
-		
-		
+		System.out.println ("Hello");
 	}
 }
